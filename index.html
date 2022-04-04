@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      html {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 1. Load the webchat.js bundle via a script tag -->
+    <script src="https://github.com/Cognigy/WebchatWidget/releases/download/v2.40.6/webchat.js"></script>
+
+    <!-- Initialize the Webchat towards a Cogngiy Endpoint via initWebchat() -->
+    <script>
+      initWebchat(
+        "https://endpoint-trial.cognigy.ai/60eae51bdc5831ec80d0abf64376bf0c6abc82aa6ef94c2672f05c26f2b0cfaa"
+      );
+    </script>
+  </body>
+</html>
