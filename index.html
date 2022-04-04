@@ -49,7 +49,26 @@
             designTemplate: 2
           }
         }
-      );
+      )
+            // decide, if you want a center webchat integration or a toggle button with popover chat
+      var isCenterWebchatLayout = true;
+      var initiallyOpenWebchat = true;
+      // if you include ".../?popover" in the URL, than the chatbot is rendered at the right button of the screen
+      if (queryString.toLowerCase().includes("popover")) {
+        isCenterWebchatLayout = false;
+      }
+      // if you include ".../?popover=closed" in the URL, than the popover is initially closed
+      if (queryString.toLowerCase().includes("close")) {
+        initiallyOpenWebchat = false;
+        // console.log("closed");
+      }
+      // configure the cognigy webchat accordingly (center or bottom layout)
+      var body = document.getElementsByTagName("body")[0];
+      if (isCenterWebchatLayout) {
+        body.classList.add("center-webchat");
+      } else {
+        body.classList.add("bottom-webchat");
+      };
     </script>
   </body>
 </html>
