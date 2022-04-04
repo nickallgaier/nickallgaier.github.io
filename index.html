@@ -1,28 +1,521 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- SPECIAL for Caller Authentication -->
     <title>Lufthansa Caller Authentication</title>
-    <meta charset="UTF-8" />
-    <style>
-     
-    </style>
-  </head>
+    <meta name="viewport" content="width=device-width" />
+  
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-70daa6a8-25c7-43b7-adc7-c5d464140371","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"true","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("True"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="X3M7U-CX2GA-4VKBB-RVCC3-HMMBR",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"X3M7U-CX2GA-4VKBB-RVCC3-HMMBR",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="cookiepresent",n="kknmfes7mr6qmysldyea-f-ebc09cc49-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"32","ak.cp":"686272","ak.ai":parseInt("450522",10),"ak.ol":"0","ak.cr":196,"ak.ipv":4,"ak.proto":"h2","ak.rid":"3ae242ff","ak.r":12561,"ak.a2":e,"ak.m":"g","ak.n":"essl","ak.bpcip":"82.154.194.0","ak.cport":52638,"ak.gh":"2.22.234.140","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1649090056","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==NDaFgW5RCL6wcjeaJCfTPz42mnszE99AhCmtrhWx7VoqEp9hWBKgv0uhwwvQMZ+MWFsuHwdIZAFpdcl3OuJ07KZYuosAe2iA++vNtSZdy04/xBLdYQaLjoP/MewoulTAXco9nukX0j26KmM0sitYgCIl08q5h9WNhylHMboQ2WFAR6e+528qE2LpS1ar/geoPdl1dQzK86nyOaEDYfGWbb9rWjvCuVTjYlRct5sFic7XcOg5ctL9JCT7SaGWp2qdUxKS+NNlAhkKOeptIMEUtjYyq6M494LnmLw6M1DpjBa5R2wND4MeVEPOPLwn6NiUlp/F9ySye6LR4DQnoHMokQy2yXAyzEHdtkLJnRbXlsm6Ch547ATCmLJ4kLLuuAD0zvL7jpj7mam6f7NGia/7VjEgy42rJE5X6QU5sc9wrI4=","ak.pv":"165","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
 
   <body>
-    <!-- 1. Load the webchat.js bundle via a script tag -->
-    <script src="https://github.com/Cognigy/WebchatWidget/releases/download/v2.40.6/webchat.js"></script>
+    <!-- some styling for the webchat (needed for center webchat version only) -->
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
 
-    <!-- Initialize the Webchat towards a Cogngiy Endpoint via initWebchat() -->
-    <script>
-      initWebchat(
-        "https://endpoint-trial.cognigy.ai/60eae51bdc5831ec80d0abf64376bf0c6abc82aa6ef94c2672f05c26f2b0cfaa",
-        {
-          settings: {
-            designTemplate: 2
-          }
+      @media (min-width: 576px) {
+        .center-webchat [data-cognigy-webchat] {
+          position: fixed;
+
+          left: 50%;
+          top: 50%;
+
+          width: 480px;
+          height: 640px;
+
+          margin-left: -240px;
+          margin-top: -320px;
         }
-      )
-      cognigyWebchat.open()
+
+        .center-webchat [data-cognigy-webchat-toggle] {
+          display: none !important;
+        }
+
+        [data-header-close-button] {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <script type="text/javascript" src="https://www.lufthansa.com/resources/ff4012c24f5337fd9dfa05ffd550ea9db3200111bb03b" async ></script><script>
+      const queryString = window.location.search;
+      // console.log("queryString: " + queryString);
+
+      // functions for internet explorer compatibility
+      function urlParam(name) {
+        var results = new RegExp("[\?&]" + name + "=([^&#]*)").exec(
+          window.location.href
+        );
+        if (results == null) {
+          return null;
+        } else {
+          return decodeURI(results[1]) || 0;
+        }
+      }
+
+      function startsWith(str, word) {
+        return str.lastIndexOf(word, 0) === 0;
+      }
+
+      if (!String.prototype.includes) {
+        String.prototype.includes = function () {
+          "use strict";
+          return String.prototype.indexOf.apply(this, arguments) !== -1;
+        };
+      }
+
+      if (!("remove" in Element.prototype)) {
+        Element.prototype.remove = function () {
+          if (this.parentNode) {
+            this.parentNode.removeChild(this);
+          }
+        };
+      }
+
+      // *** DEFINE FIXED VALUES ****
+      var fixedLanguage = "";
+      // SPECIAL for station FRA = always LH
+      var fixedAirline = "LH";
+
+      // check which language to use (DE or EN=default)
+      var language = "EN";
+      var foundLanguage = false;
+      if (fixedLanguage) {
+        language = fixedLanguage;
+        foundLanguage = true;
+      }
+      // check query parameters for language
+      const paramLanguage = urlParam("language");
+      if (!fixedLanguage && paramLanguage) {
+        if (paramLanguage.toUpperCase() === "DE") {
+          language = "DE";
+          foundLanguage = true;
+        }
+        if (paramLanguage.toUpperCase() === "EN") {
+          language = "EN";
+          foundLanguage = true;
+        }
+      }
+      // determine the browser language; if 'de' then use German
+      var userLanguage =
+        window.navigator.userLanguage || window.navigator.language;
+      // console.log("User Language: " + userLanguage);
+      if (!fixedLanguage && !foundLanguage && startsWith(userLanguage, "de")) {
+        language = "DE";
+      }
+
+      // determine the airline from the URL; fallback is always LH
+      var airline = "LH";
+      var foundAirline = false;
+      if (fixedAirline) {
+        airline = fixedAirline;
+        foundAirline = true;
+      }
+      // check query parameters
+      const paramAirline = urlParam("airline");
+      if (!fixedAirline && paramAirline) {
+        if (paramAirline.toUpperCase() === "LH") {
+          airline = "LH";
+          foundAirline = true;
+        }
+        if (paramAirline.toUpperCase() === "LX") {
+          airline = "LX";
+          foundAirline = true;
+        }
+        if (paramAirline.toUpperCase() === "OS") {
+          airline = "OS";
+          foundAirline = true;
+        }
+      }
+      // check the URL itself
+      if (!fixedAirline && !foundAirline) {
+        const href = window.location.href.toLowerCase();
+        // console.log("HREF: " + href);
+        if (href.includes("lufthansa.com")) {
+          airline = "LH";
+        } else if (href.includes("swiss.com")) {
+          airline = "LX";
+        } else if (href.includes("austrian.com")) {
+          airline = "OS";
+        }
+      }
+
+      // decide, if you want a center webchat integration or a toggle button with popover chat
+      var isCenterWebchatLayout = true;
+      var initiallyOpenWebchat = true;
+      // if you include ".../?popover" in the URL, than the Chat Assistant is rendered at the right button of the screen
+      if (queryString.toLowerCase().includes("popover")) {
+        isCenterWebchatLayout = false;
+      }
+      // if you include ".../?popover=closed" in the URL, than the popover is initially closed
+      if (queryString.toLowerCase().includes("close")) {
+        initiallyOpenWebchat = false;
+        // console.log("closed");
+      }
+      // configure the cognigy webchat accordingly (center or bottom layout)
+      var body = document.getElementsByTagName("body")[0];
+      if (isCenterWebchatLayout) {
+        body.classList.add("center-webchat");
+      } else {
+        body.classList.add("bottom-webchat");
+      }
+
+      // the Cognigy endpoints depend on airline and language
+      // SPECIAL for station FRA = only LH
+      const endpointsPROD = {
+        LH: {
+          DE: "https://endpoint-trial.cognigy.ai/60eae51bdc5831ec80d0abf64376bf0c6abc82aa6ef94c2672f05c26f2b0cfaa",
+          EN: "https://endpoint-trial.cognigy.ai/60eae51bdc5831ec80d0abf64376bf0c6abc82aa6ef94c2672f05c26f2b0cfaa",
+        },
+        LX: {
+          DE: "",
+          EN: "",
+        },
+        OS: {
+          DE: "",
+          EN: "",
+        },
+      };
+      // IMPORTANT: for PROD website, remove endpoints from STG and DEV
+      const endpointsDEV = {
+        LH: {
+          DE: "",
+          EN: "",
+        },
+        LX: {
+          DE: "",
+          EN: "",
+        },
+        OS: {
+          DE: "",
+          EN: "",
+        },
+      };
+      const endpointsSTG = {
+        LH: {
+          DE: "",
+          EN: "",
+        },
+        LX: {
+          DE: "",
+          EN: "",
+        },
+        OS: {
+          DE: "",
+          EN: "",
+        },
+      };
+
+      var endpoints = endpointsPROD;
+      var useDEV = false;
+      var titlePostfix = ""; // don't show PROD in the title
+      /*
+    // SPECIAL HANDLING for testing website: use DEV as default environment
+    endpoints = endpointsDEV;
+	useDEV = true;
+	titlePostfix = "DEV";
+    // check if environment is specified in the query string
+    const paramEnvironment = urlParam('environment');
+    if (paramEnvironment) {
+	  if (paramEnvironment.toUpperCase() === 'DEV') {
+        endpoints = endpointsDEV;
+		useDEV = true;
+		titlePostfix = "DEV";
+      }
+	  if (paramEnvironment.toUpperCase() === 'STG') {
+        endpoints = endpointsSTG;
+		useDEV = false;
+		titlePostfix = "STG";
+      }
+      if (paramEnvironment.toUpperCase() === 'PROD' || paramEnvironment.toUpperCase() === 'PRD') {
+        endpoints = endpointsPROD;
+		titlePostfix = "";
+      }
+    }
+	*/
+
+      // track the referring touchpoint via "?ref=xxx" - this will be added to the "channel" parameter, when opening the webchat
+      var touchpoint = "noref";
+      const paramRef = urlParam("ref");
+      if (paramRef) {
+        touchpoint = paramRef.toLowerCase();
+      }
+
+      // the Cognigy webchat JS and the plugin shall be loaded from teh same domain
+      const websites = {
+        LH: "https://www.lufthansa.com",
+        LX: "https://www.swiss.com",
+        OS: "https://www.austrian.com",
+      };
+
+      // set the Cognigy endpoint and the channel according to the language and the airline
+      const myEndpoint = endpoints[airline][language];
+      const myChannel =
+        airline +
+        "_" +
+        language +
+        "_FRA_" +
+        (isCenterWebchatLayout ? "iFrame" : "Popover") +
+        "_" +
+        touchpoint;
+      const myURLPrefix = websites[airline];
+
+      /*
+    console.log("Airline: " + airline);
+    console.log("Language: " + language);
+    console.log("Endpoint: " + myEndpoint);
+    console.log("Channel: " + myChannel);
+    console.log("Prefix: " + myURLPrefix);
+	*/
+
+      // add a dynamic title depending on airline and language
+      const pageTitle = {
+        LH: {
+          // SPECIAL for station FRA
+          DE: "Lufthansa Chat Assistant FRA",
+          EN: "Lufthansa Chat Assistant FRA",
+        },
+        LX: {
+          DE: "SWISS Kundenservice Chat Assistant",
+          EN: "SWISS Customer Service Chat Assistant",
+        },
+        OS: {
+          DE: "Austrian Kundenservice Chat Assistant",
+          EN: "Austrian Customer Service Chat Assistant",
+        },
+      };
+      if (titlePostfix) {
+        titlePostfix += " " + language;
+      }
+      const title = pageTitle[airline][language] + " " + titlePostfix;
+      console.log("Title: " + title);
+      document.title = title;
+
+      // define the intro text, which is displayed before the "get started" button is pressed
+      const introText = {
+        LH: {
+          // SPECIAL for station FRA: different intro texts
+          DE: "<p style='padding: 10px'>Willkommen zum Lufthansa Chat Assistant. <br> Unser Chat Assistant unterst&uuml;tzt Sie gerne bei Fragen rund um Ihre Reise mit Lufthansa am Standort Frankfurt.<p>",
+          EN: "<p style='padding: 10px'>Welcome to the Lufthansa Chat Assistant. <br> Our Chat Assistant will be happy to assist you with any questions you may have about your trip with Lufthansa at Frankfurt Airport.<p>",
+        },
+        LX: {
+          DE: "<p style='padding: 10px'>Der SWISS Kundenservice Chat Assistant \"Nelly\" unterst&uuml;tzt Sie rund um die Uhr. <br> Nelly beantwortet h&auml;ufig gestellte Fragen rund um Umbuchungen, R&uuml;ckerstattungen und vieles mehr.<p>",
+          EN: "<p style='padding: 10px'>The SWISS Customer Service Chat Assistant \"Nelly\" is here to help you 24/7. <br> Nelly helps you with frequently asked questions around rebookings, refunds and much more.<p>",
+        },
+        OS: {
+          DE: "<p style='padding: 10px'>Der Austrian Kundenservice Chat Assistant \"Maria\" unterst&uuml;tzt Sie rund um die Uhr. <br> Maria beantwortet h&auml;ufig gestellte Fragen rund um Umbuchungen, R&uuml;ckerstattungen und vieles mehr.<p>",
+          EN: "<p style='padding: 10px'>The Austrian Customer Service Chat Assistant \"Maria\" is here to help you 24/7. <br> Maria helps you with frequently asked questions around rebookings, refunds and much more.<p>",
+        },
+      };
+
+      // add some "intro" text on the whitespace of the start screen above the "get started" button
+      var introRemoved = false;
+      function handleIntroText() {
+        // Hide "Powered by Cognigy" banner
+        // var banner = document.getElementsByClassName("cognigy-webchat-10nanco")[0];
+        // banner.style.display = "None";
+
+        const canvasElement = document.getElementsByClassName(
+          "webchat-chat-history"
+        )[0];
+        const introElement = document.getElementById("webchatIntro");
+        // a visible input fields indicates that he chat was started
+        const chatStarted = document.getElementsByClassName(
+          "webchat-input-message-input"
+        )[0];
+
+        // add the intro element, if the chat is not yet started, but add it once
+        if (canvasElement && !introElement && !chatStarted) {
+          // texts will depend on language (en/de) and airline (LH/LX/OS)
+          var text = introText[airline][language];
+          var helper = document.createElement("div");
+          helper.setAttribute("id", "webchatIntro");
+          helper.innerHTML = text;
+          canvasElement.parentNode.insertBefore(helper, canvasElement);
+        }
+
+        // remove the intro element again, when the chat is started
+        if (canvasElement && introElement && chatStarted) {
+          introElement.remove();
+          introRemoved = true;
+        }
+      }
+
+      // load the scripts before starting the Chat Assistant.
+      // Important: the main webchat JS needs to be loaded before you can load the plugnins
+      function loadScript(src, callback) {
+        var script = document.createElement("script");
+        script.setAttribute("src", src);
+
+        function handleLoad() {
+          callback(null);
+        }
+
+        script.onload = handleLoad;
+        document.body.appendChild(script);
+      }
+
+      // Load the webchat.js bundle via a script tag from Akamai NetStorage using the airline-specific URL
+      var DEV_suffix = "";
+      if (useDEV) {
+        DEV_suffix = "_test";
+      }
+      var webchat_JS_URL =
+        myURLPrefix + "/digitalassistant/cognigy_webchat" + DEV_suffix + ".js";
+      // SPECIAL HANDLING for testing a specific webchat JS version
+      // webchat_JS_URL = "https://cognigylhgonly.blob.core.windows.net/webchat-endpoints/webchat.legacy.v2.23.1.js";
+      var adaptiveCards_JS_URL =
+        myURLPrefix +
+        "/digitalassistant/cognigy_plugin_adaptivecards" +
+        DEV_suffix +
+        ".js";
+      var adaptiveCardsCarousel_JS_URL =
+        myURLPrefix +
+        "/digitalassistant/cognigy_plugin_adaptivecards_carousel" +
+        DEV_suffix +
+        ".js";
+
+      var settings = {
+        // new feature "unseen messages" works with webchat versions >= 2.23.0
+        enableUnreadMessagePreview: true,
+        enableUnreadMessageBadge: true,
+        enableUnreadMessageSound: true,
+        enableUnreadMessageTitleIndicator: true,
+        useSessionStorage: true,
+      };
+
+      if (!isCenterWebchatLayout) {
+        settings.engagementMessageText = "Can I help you?";
+        settings.engagementMessageDelay = 15000;
+        settings.showEngagementMessagesInChat = true;
+      }
+
+      // STYLING PER AIRLINE
+      /**
+       * Utility function to add replaceable CSS.
+       * @param {string} styleString
+       */
+      const addStyle = (() => {
+        const style = document.createElement("style");
+        document.head.append(style);
+        return (styleString) => (style.textContent = styleString);
+      })();
+      // Add LH font family
+      addStyle(`
+        @font-face {
+            font-family: "LufthansaText";
+            src: url("https://www.lufthansa.com/digitalassistant/fonts/LufthansaTextWeb-Regular.woff2") format("woff2");
+        }
+        @font-face {
+            font-family: "LufthansaHead";
+            src: url("https://www.lufthansa.com/digitalassistant/fonts/LufthansaHeadWeb-Bold.woff2") format("woff2");
+        }
+        [data-cognigy-webchat-root] * {
+            font-family: LufthansaText,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+        }
+        [data-cognigy-webchat-root] .webchat-header-title {
+            font-family: LufthansaHead,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+        }
+        [data-cognigy-webchat-root] [data-cognigy-webchat] {
+            border-radius: 4px !important;
+        }
+        [data-cognigy-webchat-root] .webchat-input-menu-form {
+            border-bottom-left-radius: 4px !important;
+            border-bottom-right-radius: 4px !important;
+        }
+        [data-cognigy-webchat-root] button[color="primary"],
+        [data-cognigy-webchat-root] .webchat-buttons-template-root,
+        [data-cognigy-webchat-root] .webchat-buttons-template-header,
+        [data-cognigy-webchat-root] .webchat-quick-reply-template-header-message,
+        [data-cognigy-webchat-root] .webchat-carousel-template-frame,
+        [data-cognigy-webchat-root] .regular-message {
+            border-radius: 4px !important;
+        }
+        button.webchat-quick-reply-template-reply {
+            border-width: 1px !important;
+            border-radius: 4px !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            background-color: transparent !important;
+            border-color: #05164D !important;
+            transition: all 250ms ease-in-out !important;
+        }
+        button.webchat-quick-reply-template-reply span, button.webchat-quick-reply-template-reply i{
+            transition: all 0s ease-in-out !important;
+        }
+        button.webchat-quick-reply-template-reply:hover,
+        button.webchat-quick-reply-template-reply:active {
+            border-radius: 4px !important;
+            background-color: #05164D !important;
+            border-color: #05164D !important;
+            color: #ffffff !important;
+        }
+        .webchat-typing-indicator,
+        .webchat-buttons-template-root,
+        .webchat-quick-reply-template-header-message,
+        .webchat-buttons-template-header,
+        [data-cognigy-webchat-root] .regular-message.bot {
+            background: white !important;
+            color: rgba(0,0,0,0.95) !important;
+        }
+        .webchat-typing-indicator div div{
+          background-color: rgb(5, 22, 77) !important;
+        }
+        [data-cognigy-webchat-root] .regular-message.user {
+            background: linear-gradient(185deg, rgb(15, 32, 87), rgb(5, 22, 77)) !important;
+            color: rgba(255,255,255,0.95) !important;
+        }
+        `);
+
+      loadScript(webchat_JS_URL, function () {
+        // load the adaptive cards plugin
+        loadScript(adaptiveCards_JS_URL, function () {
+          // load the adaptive cards plugin for carousels
+          loadScript(adaptiveCardsCarousel_JS_URL, function () {
+            // Load sessionId from session storage
+            let sessionId = sessionStorage.getItem("sessionId");
+
+            if (!sessionId) {
+              sessionId = "session-" + Date.now() * Math.random();
+              sessionStorage.setItem("sessionId", sessionId);
+            }
+            // Initialize the Webchat towards a Cogngiy Endpoint via initWebchat()
+            initWebchat(myEndpoint, {
+              // Enforce the use of websockets
+              forceWebsockets: true,
+              // channel parameter required for analytics
+              channel: myChannel,
+              sessionId,
+              settings: settings,
+            }).then(function (cognigyWebchat) {
+              // open the webchat (if wanted)
+              if (initiallyOpenWebchat) {
+                cognigyWebchat.open();
+              }
+              // make the cognigyWebchat globally accessible
+              window.cognigyWebchat = cognigyWebchat;
+
+              // wait for the webchat to load
+              var interval = setInterval(function () {
+                handleIntroText();
+                if (introRemoved) {
+                  clearInterval(interval);
+                }
+              }, 50);
+            });
+          });
+        });
+      });
     </script>
-  </body>
+  <script type="text/javascript"  src="/7gJS/DmfS/OJ/BVEN/Y4jg/aN5wzkJQiX/FUc-Ej0B/XUYSbU5/NTjo"></script><link rel="stylesheet" type="text/css"  href="/_sec/cp_challenge/sec-3-6.css">
+            <script  src="/_sec/cp_challenge/sec-cpt-3-6.js" async defer></script>
+            <div id="sec-overlay" style="display:none;">
+            <div id="sec-container">
+            </div>
+          </div></body>
 </html>
