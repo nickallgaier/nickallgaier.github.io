@@ -4,35 +4,7 @@
     <title>Lufthansa Caller Authentication</title>
     <meta charset="UTF-8" />
     <style>
-      html,
-      body {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-      }
-
-      @media (min-width: 576px) {
-        .center-webchat [data-cognigy-webchat] {
-          position: fixed;
-
-          left: 50%;
-          top: 50%;
-
-          width: 480px;
-          height: 640px;
-
-          margin-left: -240px;
-          margin-top: -320px;
-        }
-
-        .center-webchat [data-cognigy-webchat-toggle] {
-          display: none !important;
-        }
-
-        [data-header-close-button] {
-          display: none !important;
-        }
-      }
+     
     </style>
   </head>
 
@@ -51,25 +23,6 @@
         }
       )
       cognigyWebchat.open()
-            // decide, if you want a center webchat integration or a toggle button with popover chat
-      var isCenterWebchatLayout = true;
-      var initiallyOpenWebchat = true;
-      // if you include ".../?popover" in the URL, than the chatbot is rendered at the right button of the screen
-      if (queryString.toLowerCase().includes("popover")) {
-        isCenterWebchatLayout = false;
-      }
-      // if you include ".../?popover=closed" in the URL, than the popover is initially closed
-      if (queryString.toLowerCase().includes("close")) {
-        initiallyOpenWebchat = false;
-        // console.log("closed");
-      }
-      // configure the cognigy webchat accordingly (center or bottom layout)
-      var body = document.getElementsByTagName("body")[0];
-      if (isCenterWebchatLayout) {
-        body.classList.add("center-webchat");
-      } else {
-        body.classList.add("bottom-webchat");
-      };
     </script>
   </body>
 </html>
