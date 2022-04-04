@@ -4,8 +4,34 @@
     <title>Lufthansa Caller Authentication</title>
     <meta charset="UTF-8" />
     <style>
-      html {
-        background-color: #eee;
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      @media (min-width: 576px) {
+        .center-webchat [data-cognigy-webchat] {
+          position: fixed;
+
+          left: 50%;
+          top: 50%;
+
+          width: 480px;
+          height: 640px;
+
+          margin-left: -240px;
+          margin-top: -320px;
+        }
+
+        .center-webchat [data-cognigy-webchat-toggle] {
+          display: none !important;
+        }
+
+        [data-header-close-button] {
+          display: none !important;
+        }
       }
     </style>
   </head>
